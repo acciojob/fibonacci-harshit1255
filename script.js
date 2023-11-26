@@ -1,10 +1,11 @@
 function fibonacci(num) {
 // your code here
-	if(num==1)
-		return 0;
-	if(num==2)
-		return 1;
-	return fibonacci(num-1)+fibonacci(num-2);
+	let fib = [0,1];
+	for(let i=0;i<num-2;i++)
+		{
+			fib.push(fib[fib.length-1]+fib[fib.length-2]);
+		}
+	return fib[fib.length-1];
 }
 
 module.exports = fibonacci;
